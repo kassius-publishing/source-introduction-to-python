@@ -1,0 +1,13 @@
+[book]
+authors = ["Kassius Mercurius"]
+language = "pt"
+multilingual = false
+src = "src"
+title = "Introdução à Programação em Python"
+
+[build]
+build-dir = "docs/"
+create-missing = true
+
+[output.html]
+site-url = "/introducao_a_programacao_em_python-pt-br/"
