@@ -3,7 +3,7 @@ authors = ["Kassius Mercurius"]
 language = "pt"
 multilingual = false
 src = "src"
-title = "Introdução à Programação em Python"
+title = "Introdução a Programação em Python"
 
 [build]
 build-dir = "docs/"
