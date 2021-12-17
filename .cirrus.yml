@@ -17,6 +17,8 @@ task:
       #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
     - mdbook clean
     - mdbook build
+    - git config --global user.email "kassivs-by-cirrus@gmail.com"
+    - git config --global user.name "I.M. By Cirrus-CI"
     - git add .
     - git commit -a -m 'auto from cirrus-ci'
     - git push
