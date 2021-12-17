@@ -8,6 +8,8 @@ env:
 
 
 task:
+  clone_script:
+    - git clone 
   script:
     - pacman -Syu --noconfirm
     - pacman -Fy
@@ -16,14 +18,18 @@ task:
     - locale-gen
     - pacman-key --init
     - pacman -Syu --noconfirm git mdbook openssh
+    - git config --global user.email "kassivs-by-cirrus@gmail.com"
+    - git config --global user.name "I.M. By Cirrus-CI"
     - mkdir -p ~/.ssh/
     - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
     - echo 'Host github.com\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+    - git clone git@github.com:kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
+    - cd ~/.builddir
       #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
     - mdbook clean
     - mdbook build
-    - git config --global user.email "kassivs-by-cirrus@gmail.com"
-    - git config --global user.name "I.M. By Cirrus-CI"
+    #- git config --global user.email "kassivs-by-cirrus@gmail.com"
+    #- git config --global user.name "I.M. By Cirrus-CI"
     - git add .
     - git commit -a -m 'auto from cirrus-ci'
     - git push
