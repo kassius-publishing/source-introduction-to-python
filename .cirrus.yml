@@ -19,7 +19,7 @@ task:
     - git config --global user.email "kassivs+git@gmail.com"
     - git config --global user.name "I.M. - Cirrus-CI"
     - mkdir -p ~/.ssh/
-    - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
+    - echo ${DEPLOY_KEY} | tr -d '\r' > ~/.ssh/deploy_key
     - chmod 600 ~/.ssh/deploy_key
     - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile /root/.ssh/deploy_key' > ~/.ssh/config
     #- echo 'Host github.com' > ~/.ssh/config
