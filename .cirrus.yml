@@ -14,6 +14,9 @@ task:
     - pacman -Syu --noconfirm git mdbook
     - pwd
     - ls
-    - git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
+      #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
     - mdbook clean
     - mdbook build
+    - git add .
+    - git commit -a -m 'auto from cirrus-ci'
+    - git push
