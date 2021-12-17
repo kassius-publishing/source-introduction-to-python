@@ -21,7 +21,7 @@ task:
     - mkdir -p ~/.ssh/
     - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
     - chmod 600 ~/.ssh/deploy_key
-    - echo 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+    - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile /root/.ssh/deploy_key' > ~/.ssh/config
     #- echo 'Host github.com' > ~/.ssh/config
     #- echo '    HostName github.com' >> ~/.ssh/config
     #- echo '    IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
