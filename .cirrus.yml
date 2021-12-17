@@ -1,5 +1,5 @@
 container:
-  image: openjdk:latest
+  image: archlinux:latest
   cpu: 2
   memory: 2G
 
@@ -13,3 +13,4 @@ task:
     - timedatectl set-timezone America/Sao_Paulo
     - sudo pacman-key --init
     - sudo pacman -Syu git mdbook
+    - git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
