@@ -3,11 +3,11 @@ container:
   cpu: 2
   memory: 2G
   options: --user root
-env:
-  DEPLOY_KEY: ENCRYPTED[!fd44a7f490836cee8e5559379b47eab635346cab4058aef7423968a76f34607f8801eb35c7c5ce450ecaf375633d20a3!]
 
 
 task:
+  environment:
+    DEPLOY_KEY: ENCRYPTED[!fd44a7f490836cee8e5559379b47eab635346cab4058aef7423968a76f34607f8801eb35c7c5ce450ecaf375633d20a3!]
   script:
     - pacman -Syu --noconfirm
     - pacman -Fy
@@ -20,7 +20,9 @@ task:
     - git config --global user.name "I.M. By Cirrus-CI"
     - mkdir -p ~/.ssh/
     - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
-    - echo 'Host github.com\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+      #- echo 'Host github.com\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+    - echo 'Host github.com' > ~/.ssh/config
+    - echo '    IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
     - git clone git@github.com:kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
     - cd ~/.builddir
       #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
