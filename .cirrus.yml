@@ -10,11 +10,11 @@ task:
     DEPLOY_KEY: ENCRYPTED[!fd44a7f490836cee8e5559379b47eab635346cab4058aef7423968a76f34607f8801eb35c7c5ce450ecaf375633d20a3!]
     #TOKEN: ENCRYPTED[!e0205036ea7765a6d73f7091432835d0e568ab4abde414bd2b1b314366b03c7f6c06bb7dd73af96d27c34c6c4c9240ef!]
   script:
-    #- pacman -Syu --noconfirm
-    #- pacman -Fy
-    #- echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
-    #- echo 'LANG=en_US.UTF-8' > /etc/locale.conf        
-    #- locale-gen
+    - pacman -Syu --noconfirm
+    - pacman -Fy
+    - echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
+    - echo 'LANG=en_US.UTF-8' > /etc/locale.conf        
+    - locale-gen
     - pacman-key --init
     - pacman -Syu --noconfirm git mdbook openssh
     - git config --global user.email "kassivs+git@gmail.com"
@@ -23,19 +23,12 @@ task:
     - printf '${DEPLOY_KEY}' > ~/.ssh/deploy_key
     - chmod 600 ~/.ssh/deploy_key
     - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
-    #- echo 'Host github.com' > ~/.ssh/config
-    #- echo '    HostName github.com' >> ~/.ssh/config
-    #- echo '    IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
     - ssh-keygen -R github.com
-    - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+    - ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
     - git clone git@github.com:kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
-      #- git clone https://%TOKEN%@github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
     - cd ~/.builddir
-      #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
     - mdbook clean
     - mdbook build
-    #- git config --global user.email "kassivs-by-cirrus@gmail.com"
-    #- git config --global user.name "I.M. By Cirrus-CI"
     - git add .
     - git commit -a -m 'auto from cirrus-ci'
     - git push
