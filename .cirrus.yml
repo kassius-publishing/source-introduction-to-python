@@ -11,7 +11,9 @@ task:
     - echo 'LANG=en_US.UTF-8' > /etc/locale.conf        
     - locale-gen
     - pacman-key --init
-    - pacman -Syu git mdbook
+    - pacman -Syu --noconfirm git mdbook
+    - pwd
+    - ls
     - git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
     - mdbook clean
     - mdbook build
