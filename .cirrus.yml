@@ -14,7 +14,7 @@ task:
     - echo 'LANG=en_US.UTF-8' > /etc/locale.conf        
     - locale-gen
     - pacman-key --init
-    - pacman -Syu --noconfirm git mdbook ssh
+    - pacman -Syu --noconfirm git mdbook openssh
     - mkdir -p ~/.ssh/
     - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
     - echo 'Host github.com\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
