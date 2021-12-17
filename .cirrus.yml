@@ -20,7 +20,7 @@ task:
     - git config --global user.email "kassivs+git@gmail.com"
     - git config --global user.name "I.M. - Cirrus-CI"
     - mkdir -p ~/.ssh/
-    - printf '${DEPLOY_KEY}' > ~/.ssh/deploy_key
+    - echo -e "${DEPLOY_KEY}" > ~/.ssh/deploy_key
     - chmod 600 ~/.ssh/deploy_key
     - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
     - ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
