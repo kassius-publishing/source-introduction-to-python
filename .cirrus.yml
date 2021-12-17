@@ -16,14 +16,15 @@ task:
     - locale-gen
     - pacman-key --init
     - pacman -Syu --noconfirm git mdbook openssh
-    - git config --global user.email "kassivs-by-cirrus@gmail.com"
-    - git config --global user.name "I.M. By Cirrus-CI"
+    - git config --global user.email "kassivs+git@gmail.com"
+    - git config --global user.name "I.M. - Cirrus-CI"
     - mkdir -p ~/.ssh/
     - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
-      #- echo 'Host github.com\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
-    - echo 'Host github.com' > ~/.ssh/config
-    - echo '    HostName github.com' >> ~/.ssh/config
-    - echo '    IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
+    - chmod 600 ~/.ssh/deploy_key
+    - echo 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+    #- echo 'Host github.com' > ~/.ssh/config
+    #- echo '    HostName github.com' >> ~/.ssh/config
+    #- echo '    IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
     - git clone git@github.com:kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
     - cd ~/.builddir
       #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
