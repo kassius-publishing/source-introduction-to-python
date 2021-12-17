@@ -25,6 +25,8 @@ task:
     #- echo 'Host github.com' > ~/.ssh/config
     #- echo '    HostName github.com' >> ~/.ssh/config
     #- echo '    IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
+    #- ssh-keygen -R github.com
+    - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
     - git clone git@github.com:kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
     - cd ~/.builddir
       #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
