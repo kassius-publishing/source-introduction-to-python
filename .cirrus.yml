@@ -2,6 +2,9 @@ container:
   image: archlinux:latest
   cpu: 2
   memory: 2G
+env:
+  DEPLOY_KEY: ENCRYPTED[!fd44a7f490836cee8e5559379b47eab635346cab4058aef7423968a76f34607f8801eb35c7c5ce450ecaf375633d20a3!]
+
 
 task:
   script:
@@ -11,9 +14,10 @@ task:
     - echo 'LANG=en_US.UTF-8' > /etc/locale.conf        
     - locale-gen
     - pacman-key --init
-    - pacman -Syu --noconfirm git mdbook
-    - pwd
-    - ls
+    - pacman -Syu --noconfirm git mdbook ssh
+    - mkdir -p ~/.ssh/
+    - echo ${DEPLOY_KEY} > ~/.ssh/deploy_key
+    - echo 'Host github.com\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
       #- git clone https://github.com/kassius-publishing/introducao_a_programacao_em_python-pt-br.git
     - mdbook clean
     - mdbook build
