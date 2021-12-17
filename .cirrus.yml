@@ -8,8 +8,6 @@ env:
 
 
 task:
-  clone_script:
-    - git clone 
   script:
     - pacman -Syu --noconfirm
     - pacman -Fy
