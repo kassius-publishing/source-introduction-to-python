@@ -10,4 +10,4 @@ build-dir = "docs/"
 create-missing = true
 
 [output.html]
-site-url = "/introducao_a_programacao_em_python-pt-br/"
+site-url = "/introducao_a_programacao_em_python/"
