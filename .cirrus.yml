@@ -30,7 +30,7 @@ build_and_publish_task:
     - mdbook clean
     - mdbook build
   ptbr_publish_script:
-    - cd docs/
+    - cd pt-BR/docs/
     - git init
     - git remote add origin git@github.com:kassius-publishing/introducao_a_programacao_em_python.git
     - git add .
