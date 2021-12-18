@@ -22,9 +22,13 @@ build_and_publish_task:
     - mkdir -p ~/.ssh/
     - echo -e "${DEPLOY_KEY}" > ~/.ssh/deploy_key
     - chmod 600 ~/.ssh/deploy_key
-    - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+#    - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
+    - echo 'Host github.com'                  >  ~/.ssh/config
+    - echo '  HostName github.com'            >> ~/.ssh/config
+    - echo '  User git'                       >> ~/.ssh/config
+    - echo '  IdentityFile ~/.ssh/deploy_key' >> ~/.ssh/config
     - ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
-    - rm -rf .git/
+#    - rm -rf .git/
   ptbr_build_script:
     - cd pt-BR/
     - mdbook clean
