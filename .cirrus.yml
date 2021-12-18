@@ -4,12 +4,11 @@ container:
   memory: 2G
   options: --user root
 
-
-task:
+build_and_publish_task:
   auto_cancellation: $CIRRUS_CHANGE_TITLE == 'auto from cirrus-ci'
   environment:
     DEPLOY_KEY: ENCRYPTED[!fd44a7f490836cee8e5559379b47eab635346cab4058aef7423968a76f34607f8801eb35c7c5ce450ecaf375633d20a3!]
-  script:
+  prepare_script:
     - pacman -Syu --noconfirm
     - pacman -Fy
     - echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
@@ -25,12 +24,12 @@ task:
     - chmod 600 ~/.ssh/deploy_key
     - echo -e 'Host github.com\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/deploy_key' > ~/.ssh/config
     - ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
-    #- git clone git@github.com:kassius-publishing/introducao_a_programacao_em_python-pt-br.git ~/.builddir
-    #- cd ~/.builddir
     - rm -rf .git/
+  ptbr_build_script:
     - cd pt-BR/
     - mdbook clean
     - mdbook build
+  ptbr_publish_script:
     - cd docs/
     - git init
     - git remote add origin git@github.com:kassius-publishing/introducao_a_programacao_em_python.git
