@@ -1,36 +1,34 @@
 # Summary
 
-# python
+- [introdução](./intro.md)
 
-- introdução
+- [installando ferramentas](./toolchain.md)
+  - [interpretador python](./interpreter.md)
+  - [jupyter lab](./jupyter-lab.md)
+  - [google colab](./colab.md)
+  - [pc/Android](./pc-android.md)
 
-- installando ferramentas
-  - interpretador python
-  - jupyter lab
-  - google colab
-  - pc/Android
+- [como funciona](./como-funciona.md)
+  - [código script](./codigo-script.md)
+  - [interpretador/repl](./interpretador-repl.md)
+  - [criando e executando um script/exemplo](./script-exemplo.md)
 
-- como funciona
-  - código script
-  - interpretador/repl
-  - criando e executando um script/exemplo
+- [expressões vs declarações](./expressoes-vs-declaracoes.md)
+- [avaliação de expressões](./avaliacao-de-expressoes.md)
 
-- expressões vs declarações
-- avaliação de expressões
+- [variaveis](./variaveis.md)
+- [operadores](./operadores.md)
+- [funcoes](./funcoes.md)
+- [builtins](./builtins.md)
 
-- variaveis  
-- operadores  
-- funcoes  
-- builtins  
+- [controle de fluxo](./controle-de-fluxo.md)
+  - [condicionais](./condicionais.md)
 
-- controle de fluxo
-- condicionais
+- [classes](./classes.md)
 
-- classes
+- [bibliotecas](./bibliotecas.md)
+  - [stdlib](./stdlib.md)
+  - [bibliotecas proprias](./bibliotecas-proprias.md)
+  - [pypi](./pypi.md)
 
-- bibliotecas
-  - stdlib
-  - bibliotecas proprias
-  - pypi
-
-- lendo documentação
+- [lendo documentação](./lendo-documentacao.md)
