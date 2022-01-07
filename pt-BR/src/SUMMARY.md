@@ -1,34 +1,34 @@
 # Summary
 
-- [introdução](./intro.md)
+- [Introdução](./intro.md)
 
-- [installando ferramentas](./toolchain.md)
-  - [interpretador python](./interpreter.md)
-  - [jupyter lab](./jupyter-lab.md)
-  - [google colab](./colab.md)
-  - [pc/Android](./pc-android.md)
+- [Instalando ferramentas](./toolchain.md)
+  - [Interpretador Python](./interpreter.md)
+  - [Jupyter Lab](./jupyter-lab.md)
+  - [PC/Android](./pc-android.md)
 
-- [como funciona](./como-funciona.md)
-  - [código script](./codigo-script.md)
-  - [interpretador/repl](./interpretador-repl.md)
-  - [criando e executando um script/exemplo](./script-exemplo.md)
+- [Como funciona](./como-funciona.md)
+  - [Código script](./codigo-script.md)
+  - [Interpretador/REPL](./interpretador-repl.md)
+  - [Criando e executando um script/exemplo](./script-exemplo.md)
 
-- [expressões vs declarações](./expressoes-vs-declaracoes.md)
-- [avaliação de expressões](./avaliacao-de-expressoes.md)
+- [Expressões vs declarações](./expressoes-vs-declaracoes.md)
+- [Avaliação de expressões](./avaliacao-de-expressoes.md)
 
-- [variaveis](./variaveis.md)
-- [operadores](./operadores.md)
-- [funcoes](./funcoes.md)
-- [builtins](./builtins.md)
+- [Variáveis](./variaveis.md)
+- [Operadores](./operadores.md)
+- [Funções](./funcoes.md)
+- [Builtins](./builtins.md)
 
-- [controle de fluxo](./controle-de-fluxo.md)
-  - [condicionais](./condicionais.md)
+- [Controle de fluxo](./controle-de-fluxo.md)
+  - [Condicionais](./condicionais.md)
+  - [Loops (Voltas)](./loops.md)
 
-- [classes](./classes.md)
+- [Classes](./classes.md)
 
-- [bibliotecas](./bibliotecas.md)
-  - [stdlib](./stdlib.md)
-  - [bibliotecas proprias](./bibliotecas-proprias.md)
-  - [pypi](./pypi.md)
+- [Bibliotecas](./bibliotecas.md)
+  - [Stdlib](./stdlib.md)
+  - [Bibliotecas proprias](./bibliotecas-proprias.md)
+  - [PyPI](./pypi.md)
 
-- [lendo documentação](./lendo-documentacao.md)
+- [Lendo documentação](./lendo-documentacao.md)
