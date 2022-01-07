@@ -24,3 +24,7 @@ jogos, a aplicação em ciência de dados, o estudo de matemática, a aplicaçã
 quaisquer áreas da ciência, a inteligência artificial e o aprendizado de
 máquina, assim como automatizar suas tarefas no seu computador pessoal e até
 escrever suas provas-de-conceito.
+
+* * *
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Este obra está licenciada com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International</a>.
