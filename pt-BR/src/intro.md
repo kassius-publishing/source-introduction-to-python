@@ -1,4 +1,4 @@
-# introdução
+# Introdução
 
 O objetivo deste livro é apresentar a linguagem de programação Python para os
 estudantes com um *approach* diferente dos outros ótimos livros já existentes.
