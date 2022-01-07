@@ -2,25 +2,25 @@
 
 - [Introdução](./intro.md)
 
-- [Instalando ferramentas](./toolchain.md)
+- [Instalando Ferramentas](./toolchain.md)
   - [Interpretador Python](./interpreter.md)
   - [Jupyter Lab](./jupyter-lab.md)
   - [PC/Android](./pc-android.md)
 
-- [Como funciona](./como-funciona.md)
-  - [Código script](./codigo-script.md)
-  - [Interpretador/REPL](./interpretador-repl.md)
-  - [Criando e executando um script/exemplo](./script-exemplo.md)
+- [Como Funciona](./como-funciona.md)
+  - [Código Script](./codigo-script.md)
+  - [Interpretador Interativo](./interpretador-interativo.md)
+  - [Criando e Executando um Script/Exemplo](./script-exemplo.md)
 
-- [Expressões vs declarações](./expressoes-vs-declaracoes.md)
-- [Avaliação de expressões](./avaliacao-de-expressoes.md)
+- [Expressões vs Declarações](./expressoes-vs-declaracoes.md)
+- [Avaliação de Expressões](./avaliacao-de-expressoes.md)
 
 - [Variáveis](./variaveis.md)
 - [Operadores](./operadores.md)
 - [Funções](./funcoes.md)
 - [Builtins](./builtins.md)
 
-- [Controle de fluxo](./controle-de-fluxo.md)
+- [Controle de Fluxo](./controle-de-fluxo.md)
   - [Condicionais](./condicionais.md)
   - [Loops (Voltas)](./loops.md)
 
@@ -28,7 +28,7 @@
 
 - [Bibliotecas](./bibliotecas.md)
   - [Stdlib](./stdlib.md)
-  - [Bibliotecas proprias](./bibliotecas-proprias.md)
+  - [Bibliotecas Próprias](./bibliotecas-proprias.md)
   - [PyPI](./pypi.md)
 
-- [Lendo documentação](./lendo-documentacao.md)
+- [Lendo Documentação](./lendo-documentacao.md)
