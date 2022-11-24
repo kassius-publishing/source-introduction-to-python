@@ -7,7 +7,7 @@ title = "Introdução a Programação em Python"
 
 [build]
 build-dir = "docs/"
-create-missing = true
+create-missing = false
 
 [output.html]
 site-url = "/introducao_a_programacao_em_python/"
