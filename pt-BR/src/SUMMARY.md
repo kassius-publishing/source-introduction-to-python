@@ -1,6 +1,6 @@
 # Summary
 
-- [Introdução](./intro.md)
+[Introdução](./README.md)
 
 - [Instalando Ferramentas](./toolchain.md)
   - [Interpretador Python](./interpreter.md)
